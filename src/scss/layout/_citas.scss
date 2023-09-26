@@ -1,0 +1,60 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.seccion {
+    padding: 5rem 0;
+    display: none;
+
+    nav {
+        margin: 5rem 0;
+    }
+    .text-center {
+        text-align: center;
+    }
+}
+
+.mostrar {
+    display: block;
+}
+.ocultar {
+    display: none;
+}
+
+.listado-servicios {
+    gap: 3rem;
+    @include m.tablet {
+        @include m.grid(2,1rem);
+    }
+    @include m.telefono {
+        @include m.grid(2,3rem);
+    }
+    .servicio {
+        background-color: v.$blanco;
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+        border-radius: 1rem;
+        transition-property: transform;
+        transition: .5s ease;
+        cursor: pointer;
+        &.seleccionado {
+            background-color: v.$azul;
+            p {
+                color: v.$blanco;
+            }
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+.nombre-servicio {
+    color: v.$negro;
+    text-align: center;
+    font-weight: v.$regular;
+}
+.precio-servicio {
+    text-align: center;
+    color: v.$azul;
+    font-weight: v.$bold;
+    font-size: 3rem;
+}
