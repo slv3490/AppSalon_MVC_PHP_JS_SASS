@@ -3,8 +3,6 @@
 namespace Classes;
 
 use PHPMailer\PHPMailer\PHPMailer;
-use SendinBlue\Client\Configuration;
-
 
 class Email {
 
@@ -30,7 +28,7 @@ class Email {
         $mail->Username = $_ENV["EMAIL_USER"];
         $mail->Password = $_ENV["EMAIL_PASS"];
 
-        $mail->setFrom('slv3490@gmail.com', "Leonel");
+        $mail->setFrom('slv3490@gmail.com', "App Salon");
         $mail->addAddress($this->email);
         $mail->Subject = 'Confirma tu cuenta';
         //Set HTML
