@@ -31,7 +31,7 @@ class Email {
         $mail->Password = $_ENV["EMAIL_PASS"];
 
         $mail->setFrom('slv3490@gmail.com', "Leonel");
-        $mail->addAddress('leonelsilvera9@gmail.com');
+        $mail->addAddress($this->email);
         $mail->Subject = 'Confirma tu cuenta';
         //Set HTML
         $mail->isHTML(true);
@@ -59,7 +59,7 @@ class Email {
         $mail->Password = $_ENV["EMAIL_PASS"];
 
         $mail->setFrom('slv3490@gmail.com');
-        $mail->addAddress('leonelsilvera9@gmail.com');
+        $mail->addAddress($this->email);
         $mail->Subject = 'Confirma tu cuenta';
         //Set HTML
         $mail->isHTML(true);
