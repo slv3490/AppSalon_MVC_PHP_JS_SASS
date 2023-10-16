@@ -5,7 +5,7 @@
     include_once __DIR__ . "/../templates/alertas.php";
 ?>
 
-<form class="formulario" method="POST" action="/">
+<form class="formulario login" method="POST" action="/">
     <div class="campo">
         <label for="email">E-mail</label>
         <input type="email" placeholder="Tu Email" id="email" name="email">
@@ -23,3 +23,10 @@
     <a href="/crear-cuenta">¿No tienes cuenta? Crear una.</a>
     <a href="/olvide">¿Olvidaste tu contraseña?</a>
 </div>
+
+<?php 
+
+    $script = "
+        <script src='build/js/ancho.js'></script>
+    "
+?>

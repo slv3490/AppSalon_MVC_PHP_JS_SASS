@@ -1,0 +1,1 @@
+!function(){const o=document.querySelector(".formulario.login");window.innerWidth>=375&&o.classList.remove("login")}();

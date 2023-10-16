@@ -2,9 +2,20 @@
 @use "base/mixins" as m;
 
 .acciones {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
+    @include m.telefono {
+        a {
+            text-align: left;
+            &:last-of-type {
+                text-align: right;
+            }
+        }
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
     a {
         color: v.$blanco;
         display: block;

@@ -22,7 +22,7 @@
     <div id="paso-2" class="seccion">
         <h2>Tus Datos y Cita</h2>
         <p class="text-center">Coloca tus datos y fecha de tu cita</p>
-        <form class="formulario">
+        <form class="formulario login">
             <div class="campo">
                 <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" disabled value="<?php echo $nombre ?>">
@@ -57,5 +57,6 @@
     $script = "
         <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
         <script src='build/js/app.js'></script>
+        <script src='build/js/ancho.js'></script>
     "
 ?>

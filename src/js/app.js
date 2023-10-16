@@ -31,7 +31,6 @@ function iniciarApp() {
     mostrarResumen();
 }
 
-
 function mostrarSeccion() {
     //Ocultar la seccion que tenga la clase de mostrar
     const seccionAnterior = document.querySelector(".mostrar");
@@ -337,6 +336,4 @@ async function reservarCita() {
             text: 'Hubo un error al guardar la cita'
           })
     }
-
-    
 }

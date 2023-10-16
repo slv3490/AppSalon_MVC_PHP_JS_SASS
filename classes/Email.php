@@ -3,6 +3,8 @@
 namespace Classes;
 
 use PHPMailer\PHPMailer\PHPMailer;
+use SendinBlue\Client\Configuration;
+
 
 class Email {
 
@@ -24,11 +26,12 @@ class Email {
         $mail->Host = $_ENV["EMAIL_HOST"];
         $mail->SMTPAuth = true;
         $mail->Port = $_ENV["EMAIL_PORT"];
+        $mail->Port = 587;
         $mail->Username = $_ENV["EMAIL_USER"];
         $mail->Password = $_ENV["EMAIL_PASS"];
 
-        $mail->setFrom('cuentas@appsalon.com');
-        $mail->addAddress('cuentas@appsalon.com', 'AppSalon.com');
+        $mail->setFrom('slv3490@gmail.com', "Leonel");
+        $mail->addAddress('leonelsilvera9@gmail.com');
         $mail->Subject = 'Confirma tu cuenta';
         //Set HTML
         $mail->isHTML(true);
@@ -55,8 +58,8 @@ class Email {
         $mail->Username = $_ENV["EMAIL_USER"];
         $mail->Password = $_ENV["EMAIL_PASS"];
 
-        $mail->setFrom('cuentas@appsalon.com');
-        $mail->addAddress('cuentas@appsalon.com', 'AppSalon.com');
+        $mail->setFrom('slv3490@gmail.com');
+        $mail->addAddress('leonelsilvera9@gmail.com');
         $mail->Subject = 'Confirma tu cuenta';
         //Set HTML
         $mail->isHTML(true);
@@ -64,13 +67,13 @@ class Email {
 
         $contenido = "<html>" ;
         $contenido .= "<p><strong>Hola " . $this->nombre . " presiona en el siguiente enlace para reestablecer tu cuenta.</strong></p>";
-        $contenido .= "<p><a href='" . $_ENV["APP_URL"] . "/recuperar?token=" . $this->token . "'>Reestablecer Cuenta</a></p>";
+        $contenido .= "<p><a href='" . $_ENV["APP_URL"] ."/recuperar?token=" . $this->token . "'>Reestablecer Cuenta</a></p>";
         $contenido .= "<p>Si tu no solicitaste esta cuenta, puedes ignorar el mensaje</p>";
         $contenido .= "</html>";
 
         $mail->Body = $contenido;
 
         //Enviar el correo
-        $mail->send();
+        $mail->send();        
     }
 }

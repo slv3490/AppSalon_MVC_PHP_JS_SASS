@@ -5,11 +5,25 @@
     margin-top: 5rem;
     width: 95%;
     margin: 3rem auto;
+    &.login {
+        .campo {
+            display: block;
+            label,
+            input {
+                display: block;
+                margin: auto auto auto 0;
+            }
+            label {
+                text-align: left;
+                margin-bottom: 1rem;
+            }
+        }
+    }
 }
 .campo {
     display: flex;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     label {
         flex: 0 0 12rem;
     }
