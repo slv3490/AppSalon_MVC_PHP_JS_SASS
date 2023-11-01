@@ -1,4 +1,4 @@
-#Sobre el proyecto AppSalón 💈
+# Sobre el proyecto AppSalón 💈
 Proyecto en el cual se pueden encargar citas mediante la aplicación teniendo que previamente haberse registrado medíante un formulario, donde solamente el administrador podrá ver los datos del cliente con su respectivo nombre, fecha de la cita, horario, el monto total a cobrar y poder administrar la creacion, actualizacion y eliminacion de las citas.
 ## Funcionalidades
 - Validación para todas las funcionalidades relacionadas al back-end
